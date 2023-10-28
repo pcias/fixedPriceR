@@ -14,7 +14,6 @@
 #   Check Package:             'Cmd + Shift + E'
 #   Test Package:              'Cmd + Shift + T'
 
-library(memoise)
 library(purrr)
 library(priceR)
 
