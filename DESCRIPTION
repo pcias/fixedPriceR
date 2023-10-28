@@ -6,12 +6,10 @@ Author: Przemyslaw Cias
 Maintainer: Przemyslaw Cias <przemyslaw.cias@gmail.com>
 Description: This is a fix overlay on top of package priceR, that solves
  issue when convert_currencies called with same currency
- memoisation on disk for API saving
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports:
-    memoise,
     purrr,
     priceR (>= 1.0.0),
     lubridate

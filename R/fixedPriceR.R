@@ -18,10 +18,6 @@ library(memoise)
 library(purrr)
 library(priceR)
 
-cm <- cachem::cache_disk()
-
-
-m_convert_currencies <- memoise(convert_currencies, cache = cm)
 
 #' fixed_convert_currencies
 #' @export
@@ -32,5 +28,5 @@ m_convert_currencies <- memoise(convert_currencies, cache = cm)
 #' @param floor_unit See priceR::convert_currencies
 #' @returns A vector of values in 'to' currency
 fixed_convert_currencies <- function(price_start,from, to, date = lubridate::today(), floor_unit = "day") {
-  purrr::map_vec(price_start, \(x) ifelse(from!=to, m_convert_currencies(x, from, to, date, floor_unit), x))
+  purrr::map_vec(price_start, \(x) ifelse(from!=to, convert_currencies(x, from, to, date, floor_unit), x))
 }
