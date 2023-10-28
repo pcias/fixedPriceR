@@ -1,0 +1,21 @@
+Package: fixedPriceR
+Type: Package
+Title: his is a fix overlay on top of package priceR
+Version: 0.1.0
+Author: Przemyslaw Cias
+Maintainer: Przemyslaw Cias <przemyslaw.cias@gmail.com>
+Description: This is a fix overlay on top of package priceR, that solves
+ issue when convert_currencies called with same currency
+ memoisation on disk for API saving
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports:
+    memoise,
+    purrr,
+    priceR (>= 1.0.0),
+    lubridate
+RoxygenNote: 7.2.3
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
